@@ -24,8 +24,6 @@ function DarkMode(props) {
     }
 
     const switchTheme = (e: any) => {
-        //eslint-disable-next-line no-debugger
-        debugger;
 
         if (theme === darkTheme) {
             body.classList.replace(darkTheme, lightTheme);
