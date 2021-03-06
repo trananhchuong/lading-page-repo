@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import './styles/header.scss';
 import { IMAGES_HEADER } from '../../constant/ImagesConstant';
+import './styles/header.scss';
 
 Header.propTypes = {
 
@@ -26,16 +25,16 @@ function Header(props) {
                 </div>
                 <ul className={click ? 'nav-options active' : 'nav-options'}>
                     <li className="option" onClick={closeMobileMenu}>
-                        <a href="#">ABOUT</a>
+                        <a href="#">Become a host</a>
                     </li>
                     <li className="option" onClick={closeMobileMenu}>
-                        <a href="#">CONTACT</a>
+                        <a href="#">Help</a>
                     </li>
                     <li className="option" onClick={closeMobileMenu}>
-                        <a href="#">BLOG</a>
+                        <a href="#">Sign up</a>
                     </li>
-                    <li className="option mobile-option" onClick={closeMobileMenu}>
-                        <a href="#">SIGN-IN</a>
+                    <li className="option" onClick={closeMobileMenu}>
+                        <a href="#">Log in</a>
                     </li>
                     <li className="option mobile-option" onClick={closeMobileMenu}>
                         <a href="" className="sign-up">
@@ -43,24 +42,9 @@ function Header(props) {
                         </a>
                     </li>
                 </ul>
-
-
             </div>
             
-            <ul className="signin-up">
-                <li className="sign-in" onClick={closeMobileMenu}>
-                    <a href="#">Become a host</a>
-                </li>
-                <li className="sign-in" onClick={closeMobileMenu}>
-                    <a href="#">Help</a>
-                </li>
-                <li className="sign-in" onClick={closeMobileMenu}>
-                    <a href="#">Sign up</a>
-                </li>
-                <li className="sign-in" onClick={closeMobileMenu}>
-                    <a href="#">Log in</a>
-                </li>
-            </ul>
+            
             <div className="mobile-menu" onClick={handleClick}>
                 {click ? (
                     <CloseMenu className="menu-icon" />

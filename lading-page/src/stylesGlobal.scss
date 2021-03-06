@@ -17,7 +17,6 @@ body.light {
     --background-color: var(--white);
     --text-color: var(--blue);
     --font-weight: 400;
-    // --image: url("../day.jpg");
 }
 
 body.dark {
@@ -25,7 +24,6 @@ body.dark {
     --text-color: var(--white);
     --font-weight: 500;
     background-color: #000;
-    // --image: url("../night.jpg");
 }
 
 body {
@@ -33,4 +31,29 @@ body {
     color: var(--text-color);
     font-weight: var(--font-weight);
     transition: background 0.3s ease-in-out, color 0.6s ease-in-out;
+
+    .app {
+        min-height: 100vh;
+        max-width: 1440px;
+        margin: 0 auto;
+        position: relative;
+
+        .background-image-static {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                width: 100%;
+                height: 100%;
+                
+            }
+        }
+    }
 }
