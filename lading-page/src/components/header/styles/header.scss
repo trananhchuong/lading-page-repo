@@ -31,7 +31,7 @@
             grid-template-columns: repeat(5, auto);
             grid-gap: 36px;
             list-style-type: none;
-            
+
             padding-left: 25px;
             margin-bottom: 0;
             align-items: center;
@@ -43,6 +43,14 @@
             .option {
                 a {
                     color: white;
+                }
+
+                .ant-switch-checked {
+                    background-color: #555555;
+                }
+                
+                .ant-switch-inner {
+                    display: flex;
                 }
             }
 

@@ -1,5 +1,4 @@
 .data-search-box {
-
     max-height: 300px;
     min-height: 160px;
 
@@ -8,17 +7,20 @@
 
     margin-top: -4px;
 
-    .data-search{
+    .data-search {
         margin-left: 38px;
+        .item {
+            padding: 15px 0;
+        }
+        .item:first-child {
+            padding-top: 30px;
+        }
     }
-
 }
 
-
-.loading-box{
+.loading-box {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-

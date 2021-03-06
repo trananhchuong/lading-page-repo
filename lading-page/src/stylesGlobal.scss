@@ -17,6 +17,10 @@ body.light {
     --background-color: var(--white);
     --text-color: var(--blue);
     --font-weight: 400;
+
+    .mobile-menu {
+        color: #fff;
+    }
 }
 
 body.dark {
@@ -26,6 +30,9 @@ body.dark {
 
     .app {
         background: rgba(14, 14, 14, 0.9);
+    }
+    .mobile-menu {
+        color: #fff;
     }
 }
 
