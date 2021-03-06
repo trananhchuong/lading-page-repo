@@ -8,7 +8,7 @@ interface IProps {
 }
 
 
-function DataNoneConmponent(props: IProps) {
+function DataNoneComponent(props: IProps) {
     return (
         <div className="none-component" style={props.style}>
             <img src={BACKGROUND_CONSTANT.DataNone} alt="images none" className="card-img-top"
@@ -18,5 +18,5 @@ function DataNoneConmponent(props: IProps) {
 
     );
 }
-export default DataNoneConmponent;
+export default DataNoneComponent;
 

@@ -5,5 +5,18 @@
     .search-box {
         max-width: 600px;
         flex: 1;
+
+        .ant-input-prefix {
+            margin-right: 14px;
+            margin-left: 25px;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .custom-search {
+        .search-box {
+            padding: 0 10px;
+        }
     }
 }

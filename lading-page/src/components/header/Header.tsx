@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { IMAGES_HEADER } from '../../constant/ImagesConstant';
+import DarkMode from '../darkMode/DarkMode';
 import './styles/header.scss';
 
 Header.propTypes = {
@@ -25,6 +26,9 @@ function Header(props) {
                 </div>
                 <ul className={click ? 'nav-options active' : 'nav-options'}>
                     <li className="option" onClick={closeMobileMenu}>
+                        <DarkMode />
+                    </li>
+                    <li className="option" onClick={closeMobileMenu}>
                         <a href="#">Become a host</a>
                     </li>
                     <li className="option" onClick={closeMobileMenu}>
@@ -36,21 +40,16 @@ function Header(props) {
                     <li className="option" onClick={closeMobileMenu}>
                         <a href="#">Log in</a>
                     </li>
-                    <li className="option mobile-option" onClick={closeMobileMenu}>
-                        <a href="" className="sign-up">
-                            SIGN-UP
-                        </a>
-                    </li>
                 </ul>
             </div>
-            
-            
+
+
             <div className="mobile-menu" onClick={handleClick}>
                 {click ? (
                     <CloseMenu className="menu-icon" />
                 ) : (
-                        <MenuIcon className="menu-icon" />
-                    )}
+                    <MenuIcon className="menu-icon" />
+                )}
             </div>
         </div>
     );

@@ -11,7 +11,6 @@ HomePage.propTypes = {
 function HomePage() {
     return (
         <div>
-            <DarkMode/>
             <Header/>
             <CustomSearch/>
         </div>

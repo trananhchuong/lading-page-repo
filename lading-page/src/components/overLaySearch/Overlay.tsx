@@ -1,10 +1,10 @@
 import _ from 'lodash';
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import AppUtil from '../../constant/AppUtils';
 import { CityData } from '../../constant/dataFake';
 import Loading from '../loading/Loading';
-import DataNoneConmponent from '../noneComponent/DataNoneConmponent';
-
+import DataNoneComponent from '../noneComponent/DataNoneComponent';
+import './styles/overlayStyles.scss';
 
 Overlay.propTypes = {
 
@@ -20,21 +20,14 @@ interface IState {
 }
 
 function Overlay(props: IProps) {
-
     const key = _.get(props, 'keySearch', '') || '';
     const contentNone = 'Did not find the result';
-
     const [state, setState] = useState<IState>({
         loading: true,
         data: [],
     });
 
-    useEffect(() => {
-        fecthData();
-    }, [key]);
-
-
-    const fecthData = () => {
+    const fetchData = () => {
         const response = CityData;
         let dataFilter = [];
 
@@ -51,26 +44,38 @@ function Overlay(props: IProps) {
             loading: false,
             data: dataFilter
         });
-
     };
 
-    if (state.loading)
-        return <Loading />;
+    const debounceLoadData = useCallback(_.debounce(fetchData, 400), [key]);
+  
+    useEffect(() => {
+        debounceLoadData();
+    }, [key]);
 
-
+  
+ 
     if (_.size(state.data) === 0) {
-        return <DataNoneConmponent
+        return <DataNoneComponent
             contentNone={contentNone}
             style={undefined}
         />;
     }
 
+      
+    if (state.loading)
+    return <Loading />;
+
+
     const renderDataSearch = (dataSearch: any) => {
-        return _.map(dataSearch, (item, index) => {
-            return <div key={item.ID}>
-                {item.Title}
-            </div>;
-        });
+        return <div className="data-search">
+            {
+                _.map(dataSearch, (item, index) => {
+                    return <div key={item.ID} className="item"> 
+                        {item.Title}
+                    </div>;
+                })
+            }
+        </div>;
     };
 
     return <div className="data-search-box">

@@ -1,0 +1,24 @@
+.data-search-box {
+
+    max-height: 300px;
+    min-height: 160px;
+
+    overflow-x: hidden;
+    background: #fff;
+
+    margin-top: -4px;
+
+    .data-search{
+        margin-left: 38px;
+    }
+
+}
+
+
+.loading-box{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

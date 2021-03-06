@@ -15,7 +15,7 @@ function App() {
       </div>
       <Provider store={store}>
         <Router>
-          <Switch>
+          <Switch>  
             <LayoutApp />
           </Switch>
         </Router>
