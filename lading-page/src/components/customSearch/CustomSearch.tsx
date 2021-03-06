@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Input, Dropdown } from 'antd';
-const { Search } = Input;
+import Overlay from '../overLaySearch/Overlay';
+import { BACKGROUND_CONSTANT } from '../../constant/ImagesConstant';
+import _ from 'lodash';
 
-CustomSearch.propTypes = {
-
-};
+import './styles/customSearchStyles.scss';
 
 interface IState {
     loading: boolean,
@@ -23,9 +23,9 @@ function CustomSearch(props) {
     });
 
     const renderOverlay = () => {
-        return <div>
-            overlay
-        </div>;
+        return <Overlay
+            keySearch={state.key}
+        />;
     };
 
     const toggleMenu = () => {
@@ -44,54 +44,36 @@ function CustomSearch(props) {
                 ...state,
                 [name]: value
             });
-
-            // this.keyGlobal = value;
-            // this.handleInputChangeDebounce();
         }
     };
 
     return (
-        <div className="container-fluid test-share-holder mb-4 pl-0 pr-0" id="input-search">
-            <div className="row rowSearch">
-                <div className="col-md-1" />
-                <div className="col-md-10">
-                    <Dropdown
-                        overlay={renderOverlay()}
-                        placement="bottomCenter"
-                        trigger={['click']}
-                        getPopupContainer={() => {
-                            return document.getElementById('input-search')!;
-                        }}
-                        visible={state.visible}
-                        onVisibleChange={toggleMenu}
-                    >
-                        <div className="input-group" id="div-search">
-                            <Search
-                                ref={inputSearchRef}
-                                placeholder="Nhập thông tin Mã cổ đông, CMND, hoặc họ tên để tìm kiếm (Nhập tối thiểu 3 ký tự)"
-                                name="key"
-                                value={state.key}
-                                onChange={handleInputChange}
-                                allowClear={true}
-                                autoComplete="off"
-                            />
-                        </div>
-                    </Dropdown>
-                </div>
-                <div className="col-md-1" />
-            </div>
-            {/* 
-            {!AppUtil.DataUtil.isEmpty(key) && !loading && (
-                <div className="row title-result">
-                    <div className="col-md-12 text-center">
-                        <span className="span-title-result">
-                            Kết quả tìm kiếm
-                            </span>
-                        <hr className="title-result-hr" />
+        <div className="custom-search" id="input-search">
+            <div className="search-box">
+                <Dropdown
+                    overlay={renderOverlay()}
+                    placement="bottomCenter"
+                    trigger={['click']}
+                    getPopupContainer={() => {
+                        return document.getElementById('input-search')!;
+                    }}
+                    visible={state.visible}
+                    onVisibleChange={toggleMenu}
+                >
+                    <div className="input-group" id="div-search">
+                        <Input
+                            size="large"
+                            placeholder="Try Vietnam"
+                            prefix={<img src={BACKGROUND_CONSTANT.SearchIcon} />}
+                            name="key"
+                            value={state.key}
+                            onChange={handleInputChange}
+                            allowClear={true}
+                            style={{ height: 60 }}
+                        />
                     </div>
-                </div>
-            )}
-            {!AppUtil.DataUtil.isEmpty(key) && !visible && this.renderResultSearch()} */}
+                </Dropdown>
+            </div>
         </div>
     );
 }

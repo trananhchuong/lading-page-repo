@@ -1,8 +1,10 @@
 import axiosClient from './axiosClient';
+import { getAllCity } from '../constant/ApiConstant';
+
 
 const productApi = {
     getAll: () => {
-        const url = 'api/group';
+        const url = getAllCity;
         return axiosClient.get(url);
     },
 
