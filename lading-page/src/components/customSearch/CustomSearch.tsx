@@ -13,8 +13,7 @@ interface IState {
     key: string
 }
 
-function CustomSearch(props) {
-    const inputSearchRef: any = React.useRef(null);
+function CustomSearch() {
 
     const [state, setState] = useState<IState>({
         loading: false,
@@ -39,13 +38,15 @@ function CustomSearch(props) {
         const target = event.target;
         if (target) {
             const name = target.name;
-            const value = target.type === 'checkbox' ? target.checked : target.value;
+            const value = target.type === 'checkbox' ? target.checked : (target.value ? target.value : null);
             setState({
                 ...state,
                 [name]: value
             });
         }
     };
+
+    console.log('data: ', state.key);
 
     return (
         <div className="custom-search" id="input-search">
@@ -68,7 +69,6 @@ function CustomSearch(props) {
                             name="key"
                             value={state.key}
                             onChange={handleInputChange}
-                            allowClear={true}
                             style={{ height: 60 }}
                         />
                     </div>
