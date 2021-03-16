@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/lading-page-repo/static/css/main.4804d984.chunk.css",
+    "main.js": "/lading-page-repo/static/js/main.c4e7c3bd.chunk.js",
+    "main.js.map": "/lading-page-repo/static/js/main.c4e7c3bd.chunk.js.map",
+    "runtime-main.js": "/lading-page-repo/static/js/runtime-main.7c5c27b4.js",
+    "runtime-main.js.map": "/lading-page-repo/static/js/runtime-main.7c5c27b4.js.map",
+    "static/js/2.53b9ce01.chunk.js": "/lading-page-repo/static/js/2.53b9ce01.chunk.js",
+    "static/js/2.53b9ce01.chunk.js.map": "/lading-page-repo/static/js/2.53b9ce01.chunk.js.map",
+    "static/css/3.fc2db407.chunk.css": "/lading-page-repo/static/css/3.fc2db407.chunk.css",
+    "static/js/3.3f85f245.chunk.js": "/lading-page-repo/static/js/3.3f85f245.chunk.js",
+    "static/js/3.3f85f245.chunk.js.map": "/lading-page-repo/static/js/3.3f85f245.chunk.js.map",
+    "static/css/4.8fee4a48.chunk.css": "/lading-page-repo/static/css/4.8fee4a48.chunk.css",
+    "static/js/4.45700981.chunk.js": "/lading-page-repo/static/js/4.45700981.chunk.js",
+    "static/js/4.45700981.chunk.js.map": "/lading-page-repo/static/js/4.45700981.chunk.js.map",
+    "index.html": "/lading-page-repo/index.html",
+    "static/css/3.fc2db407.chunk.css.map": "/lading-page-repo/static/css/3.fc2db407.chunk.css.map",
+    "static/css/4.8fee4a48.chunk.css.map": "/lading-page-repo/static/css/4.8fee4a48.chunk.css.map",
+    "static/css/main.4804d984.chunk.css.map": "/lading-page-repo/static/css/main.4804d984.chunk.css.map",
+    "static/js/2.53b9ce01.chunk.js.LICENSE.txt": "/lading-page-repo/static/js/2.53b9ce01.chunk.js.LICENSE.txt",
+    "static/js/3.3f85f245.chunk.js.LICENSE.txt": "/lading-page-repo/static/js/3.3f85f245.chunk.js.LICENSE.txt",
+    "static/media/airbnb-logo.4fa6dc7c.svg": "/lading-page-repo/static/media/airbnb-logo.4fa6dc7c.svg",
+    "static/media/background.c7e0f30f.jpg": "/lading-page-repo/static/media/background.c7e0f30f.jpg",
+    "static/media/icon-search-none.bf664cdd.svg": "/lading-page-repo/static/media/icon-search-none.bf664cdd.svg",
+    "static/media/menu.96de8baf.svg": "/lading-page-repo/static/media/menu.96de8baf.svg",
+    "static/media/night-icon.50600355.svg": "/lading-page-repo/static/media/night-icon.50600355.svg",
+    "static/media/search-icon.6b12ea72.svg": "/lading-page-repo/static/media/search-icon.6b12ea72.svg",
+    "static/media/sunny-icon.137e9c17.svg": "/lading-page-repo/static/media/sunny-icon.137e9c17.svg",
+    "static/media/x.34697784.svg": "/lading-page-repo/static/media/x.34697784.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7c5c27b4.js",
+    "static/css/3.fc2db407.chunk.css",
+    "static/js/3.3f85f245.chunk.js",
+    "static/css/main.4804d984.chunk.css",
+    "static/js/main.c4e7c3bd.chunk.js"
+  ]
+}
